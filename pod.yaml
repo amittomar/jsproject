@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mintnodeapp-pod
+  labels:
+    app: mintnodeapp
+spec:
+  containers:
+  - name: mintnodeapp
+    image: amittomar1101/nodeapp:2
+    resources:
+      limits:
+        memory: "256Mi"
+        cpu: "500m"
+    livenessProbe:
+      httpGet:
+        path: /
+        port: 8585
+      initialDelaySeconds: 5
+      periodSeconds: 10
+    ports:
+    - containerPort: 8585
+  nodeSelector:
+    purpose: training

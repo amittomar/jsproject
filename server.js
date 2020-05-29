@@ -7,7 +7,7 @@ var fs = require('fs');
 
 
 // Constants
-const PORT = 8080;
+const PORT = 8585;
 const HOST = '0.0.0.0';
 
 var content = 'Namaste - Bangalore ' + ' ' + os.hostname();
