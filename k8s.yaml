@@ -29,7 +29,7 @@ spec:
           limits:
             memory: "128Mi"
             cpu: "100m"
-        image: amittomar1101/nodeapp:2
+        image: az204repo.azurecr.io/amittomarjsproject:2
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8080
