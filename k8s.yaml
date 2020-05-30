@@ -32,7 +32,7 @@ spec:
         image: az204repo.azurecr.io/amittomarjsproject:2
         imagePullPolicy: IfNotPresent
         ports:
-        - containerPort: 8080
+        - containerPort: 8585
         env:
           - name: USER
             valueFrom:
@@ -47,7 +47,7 @@ kind: Service
 metadata:
   name: mintnodeapp-service
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: mintnodeapp
   ports:
