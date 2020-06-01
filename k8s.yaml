@@ -29,7 +29,7 @@ spec:
           limits:
             memory: "128Mi"
             cpu: "100m"
-        image: az204repo.azurecr.io/amittomarjsproject:2
+        image: az204repo.azurecr.io/amittomarjsproject:16
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8585
